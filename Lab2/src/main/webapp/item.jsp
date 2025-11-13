@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Bài 1 </title>
+<title>Insert title here</title>
 </head>
 <body>
-	<h1 color="red">Message: ${message}</h1>
-	<h1>Now Date: ${now.date}</h1>
+	<p>${param.name}</p>
+	<img src="${pageContext.request.contextPath}/img/${param.img}" alt="Hình sản phẩm" width="200px" heigh="200px">
 </body>
 </html>

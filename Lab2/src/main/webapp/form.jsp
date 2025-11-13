@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Form</title>
 </head>
 <body>
 	<form action="/form/update" method="post">
@@ -22,10 +22,8 @@
 			<option value="CN" ${user.country ? 'selected' : '' }>China</option>
 		</select> <br> <br>
 		
-		<button ${editable ? 'disable' : '' }>Create</button>
+		<button ${editable ? 'disabled' : '' }>Create</button>
 		<button>Update</button>
-		
-	
 	</form>
 </body>
 </html>
