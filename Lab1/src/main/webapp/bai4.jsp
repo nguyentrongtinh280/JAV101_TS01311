@@ -8,7 +8,6 @@
 </head>
 <body>
 	
-	<jsp:include page="menu.jsp"></jsp:include>
 	<h1>Đây là bài 4</h1>
 	<form method="post">
 		<button formaction="/Lab1/nv/insert"> Insert</button>

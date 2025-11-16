@@ -7,7 +7,6 @@
 <title>Lab 1 - Bài 1</title>
 </head>
 <body>
-	<jsp:include page="menu.jsp"></jsp:include>
 	<h1>Đây là bài 1<br>
 		BÀI 1: CÀI ĐẶT MÔI TRƯỜNG PHÁT TRIỂN (2 ĐIỂM) <br>
 		Hãy tiến hành cài đặt môi trường theo hướng dẫn trên slide bài giảng. Cụ thể

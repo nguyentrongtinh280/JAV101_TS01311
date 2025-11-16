@@ -7,7 +7,6 @@
 <title>Lab 1 - Bài 2</title>
 </head>
 <body>
-	<jsp:include page="menu.jsp"></jsp:include>
 	<h1>Đây là bài 2<br>
 		BÀI 2: TẠO DỰ ÁN WEB ĐỘNG 
 	</h1>

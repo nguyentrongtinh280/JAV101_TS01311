@@ -1,0 +1,69 @@
+/* ===== Body ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; /* nền trắng */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    min-height: 100vh; /* đảm bảo footer luôn dưới cùng */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Logo ===== */
+body img {
+    display: block;
+    margin: 30px auto; /* tăng khoảng cách */
+    max-width: 250px; /* logo to hơn */
+    height: auto;
+}
+
+/* ===== Menu ===== */
+.menu {
+    background-color: #1976d2; /* xanh dương nhẹ */
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu a {
+    color: #ffffff; /* chữ trắng */
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #0d47a1; /* xanh đậm khi hover */
+    transform: scale(1.05);
+}
+
+/* ===== Content ===== */
+.content {
+    padding: 40px 20px;
+    text-align: center;
+    flex: 1; /* giúp footer đẩy xuống dưới */
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #1976d2; /* xanh dương nhẹ, cùng tông menu */
+    color: #ffffff; /* chữ trắng */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+.footer a {
+    color: #ffffff; /* link trắng */
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: #cce5ff; /* xanh nhạt khi hover */
+}
+
