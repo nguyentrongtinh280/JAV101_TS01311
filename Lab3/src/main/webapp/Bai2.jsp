@@ -9,7 +9,7 @@
 </head>
 <body>
 	
-	<table>
+	<table border="1">
 		<thead>
 			<tr>
 				<th>No</th>
