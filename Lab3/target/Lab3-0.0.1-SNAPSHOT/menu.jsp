@@ -14,7 +14,6 @@
         <a href="${pageContext.request.contextPath}/bai2">Bài 2: Đổ dữ liệu vào bảng</a>
         <a href="${pageContext.request.contextPath}/bai3">Bài 3: Định dạng số & thời gian</a>
         <a href="${pageContext.request.contextPath}/bai4">Bài 4: Xử lý chuỗi</a>
-        <a href="${pageContext.request.contextPath}/giohang">Bài 5: Giỏ hàng</a>
     </div>
 
     <div class="content">
