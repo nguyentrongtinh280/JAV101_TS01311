@@ -14,7 +14,9 @@ public class Bai3Controller extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		req.getRequestDispatcher("Bai3Form.jsp").forward(req, resp);
+		
+		req.setAttribute("page", "Bai3Form.jsp");
+		req.getRequestDispatcher("index.jsp").forward(req, resp);
 	}
 	
 	@Override

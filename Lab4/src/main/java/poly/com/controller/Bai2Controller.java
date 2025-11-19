@@ -16,6 +16,7 @@ public class Bai2Controller extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		req.setAttribute("message", "Nhap so va chon phep tinh");
+		
 		req.getRequestDispatcher("/Bai2.jsp").forward(req, resp);
 	}
 	

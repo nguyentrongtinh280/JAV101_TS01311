@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Bài 1</title>
 </head>
 <body>
-	<c:url value="/account/login" var="url"></c:url>
+	<c:url value="/login" var="url"></c:url>
 	<form action="${url}" method="post">
 		<input name="username"> <br><br>
 		<input name="password" type="password"> <br><br>

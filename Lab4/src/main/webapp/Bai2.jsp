@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Bai 2</title>
+<title>Bài 2</title>
 </head>
 <body>
 	<c:url value="/calculate" var="cal"></c:url>

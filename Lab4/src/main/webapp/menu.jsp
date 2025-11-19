@@ -10,10 +10,11 @@
 
 
     <div class="menu">
-        <a href="${pageContext.request.contextPath}/account/login">Bài 1: Phân biệt GET và POST</a>
+    	<a href="${pageContext.request.contextPath}">Trang chủ</a>
+        <a href="${pageContext.request.contextPath}/login">Bài 1: Phân biệt GET và POST</a>
         <a href="${pageContext.request.contextPath}/bai2">Bài 2: Xử lý form nhiều nút</a>
         <a href="${pageContext.request.contextPath}/Registration">Bài 3: Đọc tham số</a>
-        <a href="${pageContext.request.contextPath}/bai4">Bài 4: Upload file</a>
+        <a href="${pageContext.request.contextPath}/upload">Bài 4: Upload file</a>
     </div>
 
 
