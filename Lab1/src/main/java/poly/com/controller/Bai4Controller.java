@@ -14,7 +14,8 @@ public class Bai4Controller extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		req.getRequestDispatcher("bai4.jsp").forward(req, resp);
+		req.setAttribute("page", "bai4.jsp");
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
 	}
 	
 	@Override
@@ -34,5 +35,8 @@ public class Bai4Controller extends HttpServlet {
 		else  {
 			resp.getWriter().println("<h1> Find </h1>");
 		}
+		
+		req.setAttribute("page", "bai4.jsp");
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
 	}
 }

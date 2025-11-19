@@ -8,9 +8,6 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-		
-	
-	<img alt="Logo" src="img/logofpt.png">
     <div class="menu">
       
         <a href="${pageContext.request.contextPath}/bai1">Bài 1: Cài đặt môi trường</a>
@@ -20,15 +17,6 @@
 		<a href="${pageContext.request.contextPath}/bai3">Bài 3: Xuất thông tin địa chỉ url </a>
 		
 		<a href="${pageContext.request.contextPath}/bai4">Bài 4: Ánh xạ servlet với nhiều url</a>
-    </div>
-
-    <div class="content">
-        <h2>Chào mừng bạn đến với Lab 1!</h2>
-    </div>
-
-    <div class="footer">
-        © 2025 Lab 1</a>
-    </div>
-	
+    </div>	
 </body>
 </html>

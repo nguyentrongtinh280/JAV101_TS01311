@@ -14,6 +14,8 @@ public class Bai1Controller extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		req.getRequestDispatcher("bai1.jsp").forward(req, resp);
+		
+		req.setAttribute("page", "bai1.jsp"); 
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
 	}
 }

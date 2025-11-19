@@ -7,10 +7,26 @@
 <title>Lab 1 - Index</title>
 </head>
 <body>
-	<jsp:include page="menu.jsp"></jsp:include>
+    <img alt="Logo" src="img/logofpt.png">
+    <jsp:include page="menu.jsp"></jsp:include>
 
+    <div class="content" style="min-height:400px; text-align:left;">
+        <%
+            String includePage = (String) request.getAttribute("page");
+            if (includePage != null) {
+        %>
+            <jsp:include page="<%= includePage %>" />
+        <%
+            } else {
+        %>
+            <h2>Chào mừng bạn đến với Lab 1!</h2>
+        <%
+            }
+        %>
+    </div>
 
-	
+    <div class="footer">
+    </div>
 	
 </body>
 </html>
