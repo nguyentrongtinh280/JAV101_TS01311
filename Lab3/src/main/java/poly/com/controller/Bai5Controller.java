@@ -26,6 +26,8 @@ public class Bai5Controller extends HttpServlet {
 		
 		req.setAttribute("items", items);
 		
+//		req.setAttribute("page", "GioHang.jsp"); 
+//        req.getRequestDispatcher("index.jsp").forward(req, resp);
 		req.getRequestDispatcher("GioHang.jsp").forward(req, resp);
 		
 		

@@ -24,7 +24,9 @@ public class Bai3Controller extends HttpServlet {
 		
 		req.setAttribute("item", map);
 		
-		req.getRequestDispatcher("Bai3.jsp").forward(req, resp);
+		req.setAttribute("page", "Bai3.jsp"); 
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
+		//req.getRequestDispatcher("Bai3.jsp").forward(req, resp);
 	}
 
 }

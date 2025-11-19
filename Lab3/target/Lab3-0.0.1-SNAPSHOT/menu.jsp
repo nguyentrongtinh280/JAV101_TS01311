@@ -10,10 +10,11 @@
 
 	<img alt="Logo" src="img/logofpt.png">
     <div class="menu">
-        <a href="${pageContext.request.contextPath}/bai1">Bài 1: Đổ dữ liệu vào Select Box</a>
-        <a href="${pageContext.request.contextPath}/bai2">Bài 2: Đổ dữ liệu vào bảng</a>
-        <a href="${pageContext.request.contextPath}/bai3">Bài 3: Định dạng số & thời gian</a>
+        <a href="/bai1">Bài 1: Đổ dữ liệu vào Select Box</a>
+        <a href="/bai2">Bài 2: Đổ dữ liệu vào bảng</a>
+        <a href="$/bai3">Bài 3: Định dạng số & thời gian</a>
         <a href="${pageContext.request.contextPath}/bai4">Bài 4: Xử lý chuỗi</a>
+        <a href="${pageContext.request.contextPath}/giohang">Bài 5: Giỏ hàng</a>
     </div>
 
     <div class="content">

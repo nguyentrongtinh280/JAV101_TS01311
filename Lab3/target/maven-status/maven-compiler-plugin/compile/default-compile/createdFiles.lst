@@ -1,5 +1,7 @@
 poly\com\controller\Bai2Controller.class
 poly\com\controller\Bai1Controller.class
-poly\com\controller\Bai3Controller.class
 poly\com\controller\Bai4Controller.class
+poly\com\model\Item.class
+poly\com\controller\Bai5Controller.class
+poly\com\controller\Bai3Controller.class
 poly\com\model\Country.class

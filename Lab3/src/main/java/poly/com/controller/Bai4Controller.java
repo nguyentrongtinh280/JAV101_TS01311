@@ -22,7 +22,9 @@ public class Bai4Controller extends HttpServlet {
 		map.put("content", "Noi dung ban tin, hello");
 		req.setAttribute("item", map);
 		
-		req.getRequestDispatcher("Bai4.jsp").forward(req, resp);
+		req.setAttribute("page", "Bai4.jsp"); 
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
+		//req.getRequestDispatcher("Bai4.jsp").forward(req, resp);
 	}
 
 }
