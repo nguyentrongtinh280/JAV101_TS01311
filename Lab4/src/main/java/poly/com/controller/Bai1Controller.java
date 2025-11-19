@@ -14,7 +14,7 @@ public class Bai1Controller extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		req.setAttribute("message", resp);
+		req.setAttribute("message", "");
 		req.getRequestDispatcher("/Bai1.jsp").forward(req, resp);
 	}
 	
@@ -30,6 +30,7 @@ public class Bai1Controller extends HttpServlet {
 		else {
 			req.setAttribute("message", "Invalid username or password");
 		}
+		
 		req.getRequestDispatcher("/Bai1.jsp").forward(req, resp);
 	}
 
