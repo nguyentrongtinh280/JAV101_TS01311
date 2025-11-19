@@ -16,6 +16,8 @@ public class Bai1Controller extends HttpServlet {
 		// TODO Auto-generated method stub
 		req.setAttribute("message", "Hello FPT");
 		req.setAttribute("now", new Date());
-		req.getRequestDispatcher("bai1.jsp").forward(req, resp);
+		
+		req.setAttribute("page", "bai1.jsp"); 
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
 	}
 }

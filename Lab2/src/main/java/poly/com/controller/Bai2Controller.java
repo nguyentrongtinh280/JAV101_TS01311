@@ -21,6 +21,9 @@ public class Bai2Controller extends HttpServlet {
 		map.put("gender", "Male");
 		map.put("country", "Việt Nam");
 		req.setAttribute("user", map);
-		req.getRequestDispatcher("bai2.jsp").forward(req, resp);
+		
+		req.setAttribute("page", "bai2.jsp"); 
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
+		
 	}
 }

@@ -35,7 +35,7 @@ public class FormController extends HttpServlet {
 		req.setAttribute("user", user);
 		req.setAttribute("editable", true);
 		
-		req.getRequestDispatcher("/form.jsp").forward(req, resp);
+        req.getRequestDispatcher("/form.jsp").forward(req, resp);
 		
 	}
 	
@@ -45,7 +45,8 @@ public class FormController extends HttpServlet {
 		String fullname = req.getParameter("fullname");
 		System.out.println(fullname);
 		
-		req.getRequestDispatcher("/form.jsp").forward(req, resp);
+
+        req.getRequestDispatcher("/form.jsp").forward(req, resp);
 	}
 
 }
