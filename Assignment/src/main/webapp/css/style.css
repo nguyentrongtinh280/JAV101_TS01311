@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* -------------------- LAYOUT CHUNG -------------------- */
+.header {
+    background-color: #5d9cec; /* Màu xanh dương nhạt */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #5d9cec;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+/* -------------------- MENU -------------------- */
+.main-nav {
+    background-color: #e0f8e0; /* Màu xanh lá cây nhạt */
+    border: 1px solid #77e077;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.main-nav li a:hover {
+    color: #0056b3;
+}
+
+/* -------------------- VÙNG NỘI DUNG VÀ SIDEBAR -------------------- */
+.content-container {
+    display: flex; /* Sử dụng Flexbox để chia cột */
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    flex: 3; /* Chiếm 3/4 không gian */
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1; /* Chiếm 1/4 không gian */
+    padding: 20px 10px;
+    border-left: 1px solid #eee;
+    background-color: #f8f8f8;
+}
+
+/* -------------------- BẢN TIN TRANG NHẤT (index.jsp) -------------------- */
+.news-item {
+    display: flex;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.news-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+/* -------------------- DANH SÁCH TIN (category.jsp) -------------------- */
+.news-list-item {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.news-list-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.news-image-list {
+    width: 200px; /* Ảnh lớn hơn trong trang danh sách */
+    height: 130px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 6px;
+}
+
+
+.news-info {
+    flex: 1;
+}
+
+.news-info h3 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.3em;
+}
+
+.news-info h3 a:hover {
+    color: #007bff;
+}
+
+.excerpt {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.meta {
+    font-size: 0.85em;
+    color: #999;
+    margin-top: 10px;
+}
+
+/* -------------------- WIDGETS SIDEBAR -------------------- */
+.widget {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.hot-news {
+    background-color: #ffc107; /* Màu vàng */
+}
+
+.new-news {
+    background-color: #909090; /* Màu xám */
+    color: white;
+}
+
+.viewed-news {
+    background-color: #8bc34a; /* Màu xanh lá cây */
+    color: #333;
+}
+
+.widget h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Dùng màu trắng cho khối màu tối */
+    margin-bottom: 10px;
+}
+.hot-news h3, .new-news h3 {
+     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.viewed-news h3 {
+     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget ul li {
+    padding: 5px 0;
+}
+
+.widget ul li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+.widget ul li a:hover {
+    text-decoration: underline;
+}
+
+.newsletter input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.newsletter button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #0056b3;
+}
