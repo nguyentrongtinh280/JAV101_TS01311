@@ -6,15 +6,83 @@ body {
 }
 
 /* -------------------- LAYOUT CHUNG -------------------- */
+/*
 .header {
-    background-color: #5d9cec; /* Màu xanh dương nhạt */
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 0; 
+    
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    
+    position: relative; 
+    height: 150px; 
+    overflow: hidden; 
 }
 
+.header-image {
+    width: 37%; 
+    height: 75%; 
+  
+    object-fit: fill;     
+    margin: 0;
+    padding: 0;
+    display: block;
+    opacity: 1; 
+    z-index: 20;
+}*/
+
+/* -------------------- LAYOUT CHUNG (HEADER MỚI) -------------------- */
+.header {
+    background-color: white;
+    color: black;
+    padding: 10px 5%; 
+    
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    
+    position: relative; 
+    height: 80px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.header-image {
+    height: 100%; 
+    width: auto; 
+    max-width: 250px; 
+  
+    object-fit: contain; 
+    
+    margin: 0;
+    padding: 0;
+    display: block;
+    opacity: 1; 
+    z-index: 20;
+}
+
+/* -------------------- KHU VỰC ĐĂNG NHẬP (HEADER) -------------------- */
+.header-login a {
+    text-decoration: none;
+    color: #d00000; 
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 1px solid #d00000;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.header-login a:hover {
+    background-color: #d00000;
+    color: white;
+}
+
+/* -------------------- FOOTER -------------------- */
 .footer {
-    background-color: #5d9cec;
+    background-color: #d00000;
     color: white;
     padding: 10px;
     text-align: center;
@@ -23,8 +91,9 @@ body {
 }
 
 /* -------------------- MENU -------------------- */
+/*
 .main-nav {
-    background-color: #e0f8e0; /* Màu xanh lá cây nhạt */
+    background-color: #e0f8e0; 
     border: 1px solid #77e077;
     padding: 10px 0;
     text-align: center;
@@ -49,9 +118,76 @@ body {
     color: #0056b3;
 }
 
+.main-nav {
+    background-color: #ffffff; 
+    border-top: 1px solid #ddd;
+    border-bottom: 3px solid #1e3c72; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+    padding: 0;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #1e3c72; 
+    padding: 12px 20px;
+    font-weight: 600; 
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.main-nav li a:hover {
+    background-color: #f0f0f0; 
+    color: #5d9cec; 
+}*/
+
+
+.main-nav {
+    background-color: #d00000; 
+    border-top: 1px solid #c00000;
+    /*border-bottom: 3px solid #7c0000;*/ /* Đường viền đỏ đậm hơn */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    padding: 0;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: white; 
+    padding: 12px 20px;
+    font-weight: 600; 
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.main-nav li a:hover {
+    background-color: #7c0000; 
+    color: white; 
+}
+
 /* -------------------- VÙNG NỘI DUNG VÀ SIDEBAR -------------------- */
 .content-container {
-    display: flex; /* Sử dụng Flexbox để chia cột */
+    display: flex; 
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
@@ -60,18 +196,18 @@ body {
 }
 
 .main-content {
-    flex: 3; /* Chiếm 3/4 không gian */
+    flex: 3; 
     padding: 20px;
 }
 
 .sidebar {
-    flex: 1; /* Chiếm 1/4 không gian */
+    flex: 1;
     padding: 20px 10px;
     border-left: 1px solid #eee;
     background-color: #f8f8f8;
 }
 
-/* -------------------- BẢN TIN TRANG NHẤT (index.jsp) -------------------- */
+/* -------------------- BẢN TIN TRANG NHẤT -------------------- */
 .news-item {
     display: flex;
     border-bottom: 1px dashed #ccc;
@@ -87,7 +223,7 @@ body {
     border-radius: 4px;
 }
 
-/* -------------------- DANH SÁCH TIN (category.jsp) -------------------- */
+/* -------------------- DANH SÁCH TIN  -------------------- */
 .news-list-item {
     display: flex;
     border: 1px solid #e0e0e0;
@@ -102,7 +238,7 @@ body {
 }
 
 .news-image-list {
-    width: 200px; /* Ảnh lớn hơn trong trang danh sách */
+    width: 200px; 
     height: 130px;
     object-fit: cover;
     margin-right: 20px;
@@ -145,16 +281,16 @@ body {
 }
 
 .hot-news {
-    background-color: #ffc107; /* Màu vàng */
+    background-color: #ffc107;
 }
 
 .new-news {
-    background-color: #909090; /* Màu xám */
+    background-color: #909090; 
     color: white;
 }
 
 .viewed-news {
-    background-color: #8bc34a; /* Màu xanh lá cây */
+    background-color: #8bc34a; 
     color: #333;
 }
 
@@ -162,7 +298,7 @@ body {
     margin-top: 0;
     font-size: 1.1em;
     padding-bottom: 5px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Dùng màu trắng cho khối màu tối */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); 
     margin-bottom: 10px;
 }
 .hot-news h3, .new-news h3 {
@@ -214,4 +350,38 @@ body {
 
 .newsletter button:hover {
     background-color: #0056b3;
+}
+
+
+
+/* -------------------- TRANG CHI TIẾT TIN TỨC -------------------- */
+
+.news-detail-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.news-image-detail {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-detail-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+
+.related-news h2 {
+    color: #d00000; /* Màu đỏ đồng bộ với menu */
+    border-bottom: 2px solid #d00000;
+    padding-bottom: 5px;
+    margin-top: 30px;
 }

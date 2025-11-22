@@ -9,7 +9,12 @@
 </head>
 <body>
     <header class="header">
-        <h1>ABC News - Trang Tin Tức Hàng Ngày</h1>
+    	<img src="img/logo.png" alt="Logo ABC News" class="header-image">
+        
+        <div class="header-login">
+            <a href="${pageContext.request.contextPath}/account/login">Đăng nhập</a>
+        </div>
+        
     </header>
 
     <jsp:include page="menu.jsp" />
@@ -23,7 +28,7 @@
                 <div class="news-info">
                     <h3><a href="detail.jsp?id=1">Tiêu đề bản tin nổi bật 1 (Văn hóa)</a></h3>
                     <p class="excerpt">Trích lấy phần đầu của nội dung bản tin. Đây là đoạn tóm tắt ngắn gọn để độc giả có thể nắm bắt nội dung chính. [cite: 83]</p>
-                    <p class="meta">Ngày đăng: 20/11/2025 | Tác giả: Nguyễn Văn A [cite: 87]</p>
+                    <p class="meta">Ngày đăng: 20/11/2025 | Tác giả: Nguyễn Văn A</p>
                 </div>
             </article>
 
@@ -32,7 +37,7 @@
                 <div class="news-info">
                     <h3><a href="detail.jsp?id=2">Tiêu đề bản tin nổi bật 2 (Pháp luật)</a></h3>
                     <p class="excerpt">Trích lấy phần đầu của nội dung bản tin. Đoạn trích này chỉ nên có số ký tự phù hợp để hiển thị đẹp trên trang chủ. [cite: 83]</p>
-                    <p class="meta">Ngày đăng: 19/11/2025 | Tác giả: Trần Thị B [cite: 91]</p>
+                    <p class="meta">Ngày đăng: 19/11/2025 | Tác giả: Trần Thị B</p>
                 </div>
             </article>
             

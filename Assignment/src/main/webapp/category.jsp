@@ -14,7 +14,8 @@
 <body>
 
 <header class="header">
-    <h1>ABC News - Trang Tin Tức Hàng Ngày</h1>
+	<img src="img/logo.png" alt="Logo ABC News" class="header-image">
+    
 </header>
 
 <jsp:include page="menu.jsp" />
