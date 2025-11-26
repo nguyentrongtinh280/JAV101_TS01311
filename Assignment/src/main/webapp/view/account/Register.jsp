@@ -138,7 +138,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 ABC News</p>
+        <p>Đăng ký</p>
     </footer>
 </body>
 </html>

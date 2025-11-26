@@ -1,34 +1,50 @@
+/* --- Global: Typography --- */
 body {
-    font-family: Arial, sans-serif; 
+    font-family: 'Arial', sans-serif;
+    font-size: 14px; 
 }
 
 /* --- 1. Container và Layout chung --- */
 .crud-container {
-    max-width: 95%;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 1200px; 
+    margin: 30px auto;   
+    padding: 20px; 
     background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;   
+    text-align: left; 
 }
 .crud-form, .crud-table {
     margin-bottom: 30px;
 }
+/* Styling cho tiêu đề lớn (H2) */
 h2 {
     color: #d00000;
-    border-bottom: 2px solid #d00000;
-    padding-bottom: 10px;
+    border-bottom: 3px solid #d00000; 
+    padding-bottom: 12px;
+    font-size: 1.8em; 
+    margin-top: 0;
 }
+/* Styling cho tiêu đề form/bảng (H3) */
+.crud-form h3, .crud-table h3 {
+    color: #4a4a4a; /* Màu xám đậm hơn */
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    border-left: 5px solid #007bff; 
+    padding-left: 10px;
+}
+
 
 /* --- 2. Form Styling --- */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 .form-group label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
+    margin-bottom: 6px;
+    color: #555; /* Màu label đậm hơn */
+    transition: color 0.3s;
 }
 /* Styling cho tất cả các loại input, textarea, select */
 .form-group input[type="text"],
@@ -40,19 +56,28 @@ h2 {
 .form-group select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Thêm transition */
+}
+/* Hiệu ứng focus chuyên nghiệp hơn */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); 
+    outline: none;
 }
 
-/* --- 3. Form Layout (Cột) - Dùng cho NguoiDung.jsp --- */
+/* --- 3. Form Layout (Cột) - Giữ nguyên logic Flexbox cho 2 cột --- */
 .form-group.two-columns {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between; 
 }
 .form-field-half {
     flex: 0 0 48%; 
-    margin-right: 4%;
 }
 .form-field-half:nth-child(2n) {
     margin-right: 0;
@@ -64,7 +89,7 @@ h2 {
 }
 .form-field-half.gender-group label {
     margin-right: 20px;
-    margin-bottom: 0; /* Loại bỏ margin-bottom mặc định cho label bên trong flex item */
+    margin-bottom: 0; 
 }
 
 
@@ -73,47 +98,105 @@ h2 {
     padding: 10px 20px;
     margin-right: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px; 
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-.btn-save { background-color: #28a745; color: white; }
-.btn-new { background-color: #007bff; color: white; }
-.btn-delete { background-color: #dc3545; color: white; }
-.btn-save:hover, .btn-new:hover, .btn-delete:hover { opacity: 0.9; }
+
+/* Nâng cấp hiệu ứng hover cho nút */
+.form-actions button:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 1; 
+}
+
+/* Nút Lưu */
+.btn-save { 
+    background-color: #28a745; 
+    color: white; 
+}
+/* Nút Mới */
+.btn-new { 
+    background-color: #007bff; 
+    color: white; 
+}
+/* Nút Xóa */
+.btn-delete { 
+    background-color: #dc3545; 
+    color: white; 
+}
+
 
 /* --- 5. Table Styling --- */
+.crud-table {
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    overflow-x: auto; /* Xử lý tràn ngang */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
 .crud-table table {
     width: 100%;
     border-collapse: collapse;
 }
 .crud-table th, .crud-table td {
     padding: 12px;
-    border: 1px solid #ddd;
+    border: none; /* Loại bỏ đường viền cell, chỉ giữ đường viền row */
+    border-bottom: 1px solid #eee;
     text-align: center;
 }
 .crud-table th {
-    background-color: #d00000; /* Màu đỏ của menu */
+    background-color: #d00000; 
     color: white;
     font-size: 1em;
+    font-weight: 600;
+    /* Đảm bảo bo góc cho Header của bảng */
+    &:first-child { border-top-left-radius: 7px; }
+    &:last-child { border-top-right-radius: 7px; }
 }
+
+.crud-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.crud-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.crud-table tr:hover {
+    background-color: #e6f7ff; /* Màu xanh nhẹ khi hover */
+    transition: background-color 0.2s ease;
+}
+
 /* Dùng cho bảng Người dùng do cần ít padding hơn và font nhỏ hơn */
 .crud-table.user-table th, .crud-table.user-table td {
     padding: 10px;
     font-size: 0.9em;
 }
-.crud-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
+
 .action-links a {
-    margin: 0 5px;
+    margin: 0 8px;
     text-decoration: none;
     color: #007bff;
+    transition: color 0.2s;
 }
 .action-links a:hover {
+    color: #0056b3;
     text-decoration: underline;
 }
 .no-data {
     text-align: center; 
     color: #999;
+    padding: 20px !important;
+    font-style: italic;
 }
+
+/* Đồng bộ font-size cho Menu Admin (nếu sử dụng .admin-nav) */
+/*
+.admin-nav li a {
+    font-size: 0.9em; 
+}
+*/

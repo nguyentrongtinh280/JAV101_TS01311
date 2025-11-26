@@ -99,7 +99,7 @@
         <div class="login-container">
             <h2>Đăng nhập Hệ thống</h2>
             
-            <form action="LoginController" method="POST"> 
+            <form action="${pageContext.request.contextPath}/account/login" method="POST">
                 
                 <div class="form-group">
                     <label for="email">Email:</label>
@@ -126,7 +126,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 ABC News</p>
+        <p>Đăng nhập</p>
     </footer>
 </body>
 </html>

@@ -47,7 +47,7 @@
 	</main>
 	
 	<footer class="footer">
-	        <p>&copy; 2025 ABC News</p>
+	        <p>Trang tin tức thể thao</p>
     </footer>
 
 </body>

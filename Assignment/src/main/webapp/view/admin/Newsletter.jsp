@@ -7,8 +7,21 @@
 <meta charset="UTF-8">
 <title>Quản lý Newsletter</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/StyleAdmin.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"> 
 </head>
 <body>
+	
+	<header class="header">
+    	<img src="img/logo.png" alt="Logo ABC News" class="header-image">
+        
+        <div class="header-login">
+            <a href="${pageContext.request.contextPath}/account/login">Đăng nhập</a>
+        </div>
+        
+    </header>
+
+    <jsp:include page="MenuAdmin.jsp" />
+    
 	<div class="crud-container">
 	
 	    <h2 >
@@ -61,5 +74,9 @@
 	    </div>
 	
 	</div>
+	
+	<footer class="footer">
+        <p>Trang quản trị newsletter</p>
+    </footer>
 </body>
 </html>

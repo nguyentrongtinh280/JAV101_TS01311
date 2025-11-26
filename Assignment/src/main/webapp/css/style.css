@@ -78,38 +78,77 @@ body {
 }
 
 /* -------------------- MENU -------------------- */
+
+/*================= MENU NAV TỐI ƯU & HOÀN HẢO ================= */
 .main-nav {
-    background-color: #d00000; 
-    border-top: 1px solid #c00000;
-    /*border-bottom: 3px solid #7c0000;*/ /* Đường viền đỏ đậm hơn */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    padding: 0;
-    text-align: center;
+    background: #CC0000; /* Màu nền ĐỎ đậm */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
 }
 
 .main-nav ul {
+    /* RESET CƠ BẢN */
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    
+    /* CĂN CHỈNH FLEXBOX */
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+    align-items: stretch;
 }
 
 .main-nav li a {
-    text-decoration: none;
-    color: white; 
-    padding: 12px 20px;
-    font-weight: 600; 
-    display: block;
-    transition: background-color 0.3s, color 0.3s;
+    /* ĐẢM BẢO BLOCK CHO PADDING */
+    display: block; 
+    
+    padding: 18px 25px;
+    color: #fff; /* Màu chữ mặc định là trắng */
+    font-weight: 600; /* Độ đậm cố định */
+    font-size: 1rem; 
     text-transform: uppercase;
-    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-decoration: none; 
+    position: relative;
+    
+    /* TRANSITION GỘP */
+    transition: color 0.3s, background-color 0.3s; /* LOẠI BỎ transition của font-weight */
+    
+    font-family: Arial, sans-serif;
 }
 
-.main-nav li a:hover {
-    background-color: #7c0000; 
-    color: white; 
+/* Hiệu ứng gạch chân chạy từ giữa ra */
+.main-nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    width: 0; 
+    height: 3px;
+    background: white; 
+    
+    transition: width 0.3s ease-in-out; 
+    transform: translateX(-50%);
 }
+
+.main-nav li a:hover,
+.main-nav li.active a { 
+    /* GIỮ NGUYÊN KIỂU CHỮ VÀ KÍCH THƯỚC */
+    color: #fff; /* Giữ nguyên màu chữ trắng */
+    
+    /* ĐÃ SỬA: CHỈ thay đổi màu nền đậm hơn */
+    background-color: rgba(0, 0, 0, 0.15); /* Tạo lớp phủ tối 15% */
+    
+    /* ĐÃ LOẠI BỎ font-weight: 800; để giữ nguyên độ đậm */
+}
+
+.main-nav li a:hover::after,
+.main-nav li.active a::after { 
+    width: 100%; /* Giữ hiệu ứng gạch chân */
+}
+
 
 /* -------------------- VÙNG NỘI DUNG VÀ SIDEBAR -------------------- */
 .content-container {

@@ -4,8 +4,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Trang Chủ - ABC News</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="css/style.css">  
 </head>
 <body>
     <header class="header">
@@ -47,7 +47,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 ABC News</p>
+        <p>Trang tin tức</p>
     </footer>
 </body>
 </html>

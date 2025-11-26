@@ -7,9 +7,21 @@
 <meta charset="UTF-8">
 <title>Quản lý Tin Tức</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/StyleAdmin.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-	<div class="crud-container">
+	<header class="header">
+    	<img src="img/logo.png" alt="Logo ABC News" class="header-image">
+        
+        <div class="header-login">
+            <a href="${pageContext.request.contextPath}/account/login">Đăng nhập</a>
+        </div>
+        
+    </header>
+
+    <jsp:include page="MenuAdmin.jsp" />
+    
+	<main class="crud-container">
 	
 	    <h2>
 	        <i class="fa fa-newspaper-o"></i> Quản Lý Tin Tức
@@ -17,7 +29,7 @@
 	
 	    <div class="crud-form">
 	        <h3>Thông Tin Bản Tin</h3>
-	        <form action="#" method="post">
+	        <form action="#" method="post" enctype="multipart/form-data">
 	            
 	            <div class="form-group">
 	                <label for="id">Mã bản tin:</label>
@@ -47,8 +59,7 @@
 	            </div>
 	
 	            <div class="form-group">
-	                <label for="image">Hình ảnh/Video:</label>
-	                <input type="text" id="image" name="image" >
+	                <input name="photo" type="file"><br> <br>
 	            </div>
 	            
 	            <div class="form-group">
@@ -89,6 +100,10 @@
 	        </table>
 	    </div>
 	
-	</div>
+	</main>
+	
+	<footer class="footer">
+        <p>Trang quản trị tin tức</p>
+    </footer>
 </body>
 </html>
