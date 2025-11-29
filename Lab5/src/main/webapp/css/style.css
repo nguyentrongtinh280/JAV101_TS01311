@@ -1,0 +1,191 @@
+/* Thiết lập chung và Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; 
+    margin: 0;
+    padding: 0;
+    color: #343a40; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Định kiểu Header và Logo */
+.page-header {
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.header-logo {
+    display: block;
+    margin: 15px auto; 
+    max-width: 180px; 
+    height: auto;
+}
+
+/* ===== Sửa Lỗi Menu Điều hướng (.main-nav) ===== */
+.main-nav { 
+    background-color: #007bff; /* Xanh dương nổi bật */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.main-nav ul {
+    list-style: none; /* QUAN TRỌNG: Xóa gạch đầu dòng */
+    padding: 0;
+    margin: 0;
+    display: flex; /* QUAN TRỌNG: Hiển thị menu trên một hàng */
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.main-nav li {
+    margin: 0;
+    /* Đảm bảo li không bị gạch đầu dòng */
+}
+
+.main-nav a {
+    color: #ffffff !important; /* QUAN TRỌNG: Ép màu trắng cho chữ, khắc phục lỗi màu link mặc định */
+    text-decoration: none;
+    padding: 15px 25px; 
+    display: block;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: #0056b3; 
+    color: #ffc107 !important; 
+}
+
+/* ===== Nội dung Chính (main-content) ===== */
+.main-content {
+    flex: 1; 
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* Thêm margin-top để tách biệt khỏi menu */
+    background-color: #ffffff;
+    min-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.main-content h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #007bff; 
+    color: #ffffff; 
+    text-align: center;
+    padding: 18px 0;
+    font-size: 14px;
+    /* Đảm bảo footer luôn ở dưới cùng nhờ body: display: flex; và main-content: flex: 1; */
+}
+
+
+/* ===== Result Page ===== */
+.result {
+    flex: 1;
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-size: 16px;
+    color: #333;
+}
+
+.result h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1976d2;
+}
+
+.result p {
+    margin: 12px 0;
+}
+
+.result p span {
+    font-weight: 600;
+    width: 120px;
+    display: inline-block; /* căn nhãn đều */
+}
+
+/* ===== Bài 2: Gửi Email (Form Cải Tiến – Rộng hơn) ===== */
+
+.content-bai2 {
+    max-width: 650px;               /* Tăng chiều rộng tổng thể */
+    width: 90%;                     /* Linh hoạt theo màn hình */
+    padding: 50px 60px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 35px rgba(0,0,0,0.12);
+    text-align: left;
+}
+
+/* Tiêu đề */
+.content-bai2 .form-title {
+    text-align: center;
+    color: #1a73e8;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Tăng chiều ngang của các thành phần */
+.content-bai2 .form-group {
+    margin-bottom: 18px;
+}
+
+.content-bai2 .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.content-bai2 .form-control,
+.content-bai2 textarea {
+    width: 100%;
+    max-width: 100%;                /* Đảm bảo mở rộng full */
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Textarea to hơn */
+#body-content {
+    min-height: 200px;
+}
+
+/* Nút gửi rộng và đẹp hơn */
+.content-bai2 .btn-submit {
+    margin-top: 25px;
+    padding: 18px 0;
+    width: 100%;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(26, 115, 232, 0.4);
+    transition: 0.25s ease;
+}
+
+.content-bai2 .btn-submit:hover {
+    background-color: #0d5fcc;
+    transform: translateY(-2px);
+}
+
+
+
