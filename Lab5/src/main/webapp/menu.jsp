@@ -6,7 +6,7 @@
         
         <li><a href="${pageContext.request.contextPath}/bean-utils">Bài 1: Sử dụng BeanUtil để đọc tham số</a></li>
         <li><a href="${pageContext.request.contextPath}/send-email">Bài 2: Gửi email</a></li>
-        <li><a href="${pageContext.request.contextPath}/cookie-session">Bài 3: Sử dụng cookie và session</a></li>
+        <li><a href="${pageContext.request.contextPath}/login">Bài 3: Sử dụng cookie và session</a></li>
 
     </ul>
 </nav>

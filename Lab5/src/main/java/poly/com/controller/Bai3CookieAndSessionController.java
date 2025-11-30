@@ -11,30 +11,22 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/cookie-session")
-public class Bai3CookieAndSessionControlle extends HttpServlet {
+@WebServlet("/login")
+public class Bai3CookieAndSessionController extends HttpServlet {
 
-    @Override
+	@Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
         String username = "";
         String password = "";
-        
+
+        // Đọc cookie từ trình duyệt
         Cookie[] cookies = req.getCookies();
         if (cookies != null) {
             for (Cookie cookie : cookies) {
-
-                // Chỉ lấy cookie tên "user"
                 if ("user".equals(cookie.getName())) {
                     String encoded = cookie.getValue();
-
-                    // Giải mã Base64
                     byte[] bytes = Base64.decodeBase64(encoded);
-                    String decoded = new String(bytes);
-
-                    // Tách username,password
-                    String[] userInfo = decoded.split(",");
-
+                    String[] userInfo = new String(bytes).split(",");
                     if (userInfo.length >= 2) {
                         username = userInfo[0];
                         password = userInfo[1];
@@ -46,39 +38,33 @@ public class Bai3CookieAndSessionControlle extends HttpServlet {
         req.setAttribute("username", username);
         req.setAttribute("password", password);
 
-        req.getRequestDispatcher("/view/Bai3CookieAndSession.jsp").forward(req, resp);
+        req.getRequestDispatcher("/view/Bai3Login.jsp").forward(req, resp);
     }
 
 
-    @Override
+	@Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         String remember = req.getParameter("remember-me");
 
-        if (username.equalsIgnoreCase("FPT") && password.equals("poly")) {
+        if ("Tinh15".equalsIgnoreCase(username) && "123".equals(password)) {
+            req.getSession().setAttribute("username", username); // lưu session
+            req.getSession().setAttribute("message", "Login successfully!");
 
-            req.setAttribute("message", "Login successfully");
-            req.getSession().setAttribute("username", username);
-
-            // Lưu cookie nếu chọn remember me
+            // Nếu chọn Remember me
             if (remember != null) {
-                byte[] bytes = (username + "," + password).getBytes();
-                String userInfo = Base64.encodeBase64String(bytes);
-
+                String userInfo = Base64.encodeBase64String((username + "," + password).getBytes());
                 Cookie cookie = new Cookie("user", userInfo);
-                cookie.setMaxAge(30 * 24 * 60 * 60);  // 30 ngày
-                cookie.setPath("/");
-
+                cookie.setMaxAge(30 * 24 * 60 * 60); // 30 ngày
+                cookie.setPath("/"); // hiệu lực toàn ứng dụng
                 resp.addCookie(cookie);
             }
 
+            resp.sendRedirect(req.getContextPath() + "/login");
         } else {
-            req.setAttribute("message", "Invalid login");
+            req.getSession().setAttribute("message", "Invalid login info!");
+            resp.sendRedirect(req.getContextPath() + "/login");
         }
-
-        // Redirect về GET để load JSP
-        resp.sendRedirect("/cookie-session");
     }
 }

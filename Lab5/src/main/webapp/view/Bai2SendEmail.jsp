@@ -53,6 +53,8 @@
         <%
             }
         %>
+        <br>
+        <a href="${pageContext.request.contextPath}">Quay về trang chủ</a>
 	</div>
     
 </body>

@@ -188,4 +188,223 @@ body {
 }
 
 
+/* ===== Bài 3: Cookie và Session (Đã làm đẹp) ===== */
+.content-bai3 { /* Đã đổi tên thành content-bai3 */
+    max-width: 420px; /* Thu nhỏ lại để tập trung hơn */
+    width: 90%;
+    margin: 60px auto;
+    padding: 40px 35px;
+    background-color: #ffffff;
+    border-radius: 20px; /* Bo góc mềm mại hơn */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* Shadow sâu hơn */
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Tiêu đề Form */
+.content-bai3 .form-title {
+    text-align: center;
+    color: #1a73e8; /* Màu xanh đậm hiện đại */
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Nhóm Input */
+.content-bai3 .form-group-login {
+    margin-bottom: 20px;
+    position: relative; /* Dùng cho icon */
+}
+
+/* Label */
+.content-bai3 label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px; /* Tăng khoảng cách */
+    font-size: 15px;
+    color: #495057; /* Màu chữ đậm hơn */
+}
+
+/* Input */
+.content-bai3 input[type="text"],
+.content-bai3 input[type="password"] {
+    width: 100%;
+    padding: 14px 18px;
+    padding-left: 45px; /* Tạo không gian cho icon */
+    border-radius: 12px;
+    border: 1px solid #dee2e6; /* Viền sáng hơn */
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng focus input */
+.content-bai3 input[type="text"]:focus,
+.content-bai3 input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+    outline: none;
+}
+
+/* Icon cho Input (Sử dụng CSS thuần, giả định dùng Font Awesome hoặc thay thế bằng background-image) */
+/* Để đơn giản, tôi sẽ bỏ qua icon vì cần thư viện bên ngoài, tập trung vào form structure */
+
+
+/* Checkbox với label */
+.content-bai3 .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px; /* Tăng khoảng cách */
+    padding-top: 10px;
+}
+
+.content-bai3 .checkbox-group label {
+    margin: 0;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 8px; /* Tách checkbox và label */
+}
+
+/* Button */
+.content-bai3 .btn-login { /* Đổi tên class button thành btn-login */
+    width: 100%;
+    padding: 16px 0;
+    background-color: #1a73e8; /* Màu xanh đậm hơn */
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(26, 115, 232, 0.3);
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.content-bai3 .btn-login:hover {
+    background-color: #0d5fcc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(26, 115, 232, 0.4);
+}
+
+/* Message lỗi */
+.content-bai3 p {
+    margin: 20px 0 10px;
+    font-weight: 500;
+    color: #dc3545;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+/* ===== Bài 1: Sử dụng BeanUtil (Form Đăng ký Thông tin) ===== */
+.content-bai1 {
+    max-width: 550px; /* Độ rộng vừa phải cho form đăng ký */
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px 40px 50px; /* Thêm padding dưới để form thoáng hơn */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Shadow nhẹ nhàng */
+    text-align: left;
+}
+
+/* Tiêu đề Form */
+.content-bai1 .form-title {
+    text-align: center;
+    color: #007bff; /* Màu xanh chủ đạo */
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    border-bottom: 2px solid #e9ecef; /* Đường gạch chân nhẹ */
+    padding-bottom: 15px;
+}
+
+/* Nhóm Input */
+.content-bai1 .form-group {
+    margin-bottom: 20px;
+}
+
+/* Label */
+.content-bai1 label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #495057;
+}
+
+/* Input text và select */
+.content-bai1 input[type="text"],
+.content-bai1 select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.content-bai1 input[type="text"]:focus,
+.content-bai1 select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    outline: none;
+}
+
+/* Nhóm Radio (Giới tính) */
+.content-bai1 .gender-group {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa Male và Female */
+    margin-bottom: 20px;
+}
+
+.content-bai1 .gender-group label {
+    display: inline; /* Giữ label trên cùng dòng */
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+/* Nhóm Checkbox (Sở thích) */
+.content-bai1 .hobbies-group {
+    padding: 10px 0;
+    border: 1px dashed #ced4da;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.content-bai1 .hobbies-group label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Nút Submit */
+.content-bai1 button {
+    margin-top: 30px;
+    padding: 15px 0;
+    width: 100%;
+    background-color: #1a73e8; /* Màu xanh lá (Thành công) */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+    transition: 0.3s ease;
+    text-transform: uppercase;
+}
+
+.content-bai1 button:hover {
+    background-color: #0d5fcc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(26, 115, 232, 0.4);
+}
+
 
