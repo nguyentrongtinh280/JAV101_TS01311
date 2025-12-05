@@ -9,27 +9,37 @@
 </head>
 <body>
 
-	<header class="page-header"> <img alt="Logo" src="img/logofpt.png" class="header-logo"> </header>
+    <header class="page-header">
+        <img alt="Logo" src="img/logofpt.png" class="header-logo">
+    </header>
     
     <jsp:include page="/menu.jsp"></jsp:include>
 
-    <div class="content-bai3"> <h2 class="form-title">Đăng Nhập Hệ Thống</h2> 
+    <div class="content-bai3">
+        
+        <h2 class="form-title">Đăng Nhập Hệ Thống</h2> 
     
-    <form action="${pageContext.request.contextPath}/login" method="post">
-        	
-        	<div class="form-group-login"> <label for="username-input">Tên đăng nhập</label>
-	        	<input id="username-input" name="username" type="text" value="${username}"><br>
-        	</div>
-        	
-        	<div class="form-group-login"> <label for="password-input">Mật khẩu</label>
-	        	<input id="password-input" name="password" type="password" value="${password}"> <br>
-        	</div>
-        	
-        	<div class="checkbox-group"> <input type="checkbox" name="remember-me" id="remember-me"> 
-	        	<label for="remember-me">Remember me</label>
-        	</div>
-            
-        	<p>${message}</p> <button type="submit" class="btn-login">Đăng Nhập</button>
+        <form action="${pageContext.request.contextPath}/login" method="post">
+                
+            <div class="form-group-login">
+                <label for="username-input">Tên đăng nhập</label>
+                <input id="username-input" name="username" type="text" >
+            </div>
+                
+            <div class="form-group-login">
+                <label for="password-input">Mật khẩu</label>
+                <input id="password-input" name="password" type="password" >
+            </div>
+                
+            <div class="checkbox-group">
+                <input type="checkbox" name="remember-me" id="remember-me"
+                       ${not empty username ? "checked" : ""}>
+                <label for="remember-me">Remember me</label>
+            </div>
+                
+            <p style="color:red; font-weight:bold;">${message}</p>
+
+            <button type="submit" class="btn-login">Đăng Nhập</button>
         </form>
 
     </div>

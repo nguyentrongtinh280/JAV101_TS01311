@@ -37,6 +37,10 @@ public class Bai3CookieAndSessionController extends HttpServlet {
 
         req.setAttribute("username", username);
         req.setAttribute("password", password);
+        
+        String msg = (String) req.getSession().getAttribute("message");
+        req.setAttribute("message", msg);
+        req.getSession().removeAttribute("message");
 
         req.getRequestDispatcher("/view/Bai3Login.jsp").forward(req, resp);
     }
@@ -48,7 +52,7 @@ public class Bai3CookieAndSessionController extends HttpServlet {
         String password = req.getParameter("password");
         String remember = req.getParameter("remember-me");
 
-        if ("Tinh15".equalsIgnoreCase(username) && "123".equals(password)) {
+        if ("Tinh".equalsIgnoreCase(username) && "123".equals(password)) {
             req.getSession().setAttribute("username", username); // lưu session
             req.getSession().setAttribute("message", "Login successfully!");
 
