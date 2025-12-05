@@ -9,7 +9,7 @@ import java.sql.CallableStatement;
 
 public class Jdbc {
     static String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    static String dburl = "jdbc:sqlserver://localhost:database=HRM";
+    static String dburl = "jdbc:sqlserver://localhost:1433;databaseName=HRM;encrypt=true;trustServerCertificate=true";
     static String username = "sa";
     static String password = "123";
 
