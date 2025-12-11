@@ -1,52 +1,53 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<fmt:setBundle basename="messages"/>
+<c:choose>
+    <c:when test="${empty sessionScope.lang}">
+        <f:setLocale value="en_US" scope="session" />
+    </c:when>
+    <c:otherwise>
+        <f:setLocale value="${sessionScope.lang}" scope="session" />
+    </c:otherwise>
+</c:choose>
+
+<f:setBundle basename="messages" var="bundle" scope="session" />
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title><fmt:message key="login.title"/></title>
-
+<title><f:message key="login.title" bundle="${bundle}" /></title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css">
 </head>
-
 <body class="login-page">
 
-    <div class="login-box">
+<div class="login-box">
 
-        <!-- Tiêu đề -->
-        <h2><fmt:message key="login.title"/></h2>
+    <h2><f:message key="login.title" bundle="${bundle}" /></h2>
 
-        <!-- Hiển thị lỗi nếu có -->
-        <c:if test="${not empty error}">
-            <div id="alertError" class="alert-error">${error}</div>
-            <script>
-                setTimeout(() => {
-                    const a = document.getElementById("alertError");
-                    if(a){ a.style.opacity = 0; setTimeout(()=>a.remove(), 500); }
-                }, 3000);
-            </script>
-        </c:if>
+    <c:if test="${not empty error}">
+        <div id="alertError" class="alert-error">${error}</div>
+        <script>
+            setTimeout(() => {
+                const a = document.getElementById("alertError");
+                if(a){ a.style.opacity = 0; setTimeout(()=>a.remove(), 500); }
+            }, 3000);
+        </script>
+    </c:if>
 
-        <!-- FORM LOGIN -->
-        <form method="post" action="${pageContext.request.contextPath}/login">
+    <form method="post" action="${pageContext.request.contextPath}/login">
+        <label for="id"><f:message key="login.username" bundle="${bundle}" /></label>
+        <input type="text" id="id" name="id" value="${id}" required>
 
-            <label for="id"><fmt:message key="login.username"/></label>
-            <input type="text" id="id" name="id" value="${id}" required>
+        <label for="password"><f:message key="login.password" bundle="${bundle}" /></label>
+        <input type="password" id="password" name="password" required>
 
-            <label for="password"><fmt:message key="login.password"/></label>
-            <input type="password" id="password" name="password" required>
-
-            <button class="btn" type="submit">
-                <fmt:message key="login.button"/>
-            </button>
-
-        </form>
-
-    </div>
+        <button class="btn" type="submit">
+            <f:message key="login.button" bundle="${bundle}" />
+        </button>
+    </form>
+</div>
 
 </body>
 </html>
